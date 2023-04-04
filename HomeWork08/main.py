@@ -48,9 +48,6 @@ def delete_user():
         found = False
         for line in lines:
             fields = line.strip().split()
-            if len(fields) != 4:
-                f.write(line)
-                continue
             if fields[0] == last_name and fields[1] == first_name:
                 found = True
             else:
@@ -70,9 +67,6 @@ def modify_user():
         found = False
         for line in lines:
             fields = line.strip().split()
-            if len(fields) != 4:
-                f.write(line)
-                continue
             if fields[0] == last_name and fields[1] == first_name:
                 found = True
                 while True:
